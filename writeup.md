@@ -19,7 +19,8 @@ The goals / steps of this project are the following:
 [image5]: ./images/right_2016_12_01_13_30_48_287.jpg "Recovery Image"
 [image6]: ./images/center_2018_07_05_00_22_14_552.jpg "Normal Image"
 [image7]: ./images/center_2018_07_05_00_22_14_552_fliped.jpg "Flipped Image"
-[image8]: ./images/loss.png "Flipped Image"
+[image8]: ./images/loss_track1.png "loss curve(track1)"
+[image9]: ./images/loss_track2.png "loss curve(track2)"
 
 ## Rubric Points
 ### Model Architecture and Training Strategy
@@ -149,8 +150,11 @@ Here is loss curve(training and validation). From this figure, I think that over
 The simulator contains two tracks. So, I evaluated `Track2`, too.  
 At first, I collected data of `Track2` from simulator. As a result, I collected 35901  images and angles. And, I increased the data by data augumentation(x2).
 
-Here is loss curve(training and validation). From this figure, I think that over or under fitting has not occurred. And, you can watch the result on xxxx. 
+Here is loss curve(training and validation). 
 
+![alt text][image9]
+
+From this figure, I think that over or under fitting has not occurred. And, you can watch the result on [video_track2.mp4](https://github.com/atinfinity/CarND-Behavioral-Cloning-P3/blob/master/video_track2.mp4). 
 I think that `Track2` has the following difficult condition.
 
 - include shade scenes

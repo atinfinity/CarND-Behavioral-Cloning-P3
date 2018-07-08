@@ -98,3 +98,7 @@ Will run the video at 48 FPS. The default FPS is 60.
 * [model.h5](https://github.com/atinfinity/CarND-Behavioral-Cloning-P3/blob/master/model.h5) (a trained Keras model)
 * [writeup.md](https://github.com/atinfinity/CarND-Behavioral-Cloning-P3/blob/master/writeup.md) (a report writeup file)
 * [video.mp4](https://github.com/atinfinity/CarND-Behavioral-Cloning-P3/blob/master/video.mp4) (a video recording of your vehicle driving autonomously around the track for at least one full lap)
+
+### Optional Materials(Track2)
+* [model_track2.h5](https://github.com/atinfinity/CarND-Behavioral-Cloning-P3/blob/master/model_track2.h5) (a trained Keras model)
+* [video_track2.mp4](https://github.com/atinfinity/CarND-Behavioral-Cloning-P3/blob/master/video_track2.mp4) (a video recording of your vehicle driving autonomously around the track for at least one full lap)
