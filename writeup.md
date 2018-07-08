@@ -30,19 +30,19 @@ My final model consisted of the following layers:
 
 | Layer  |Description  |
 |---|---|
-| Input | 200x60x3 YUV image  |
-| Lambda | Normalize  |
-| Convolution 5x5 | activation='relu' |
-| Convolution 5x5 | activation='relu' |
-| Convolution 5x5 | activation='relu' |
-| Convolution 3x3 | activation='relu' |
-| Convolution 3x3 | activation='relu' |
+| Input | 3@66x200 YUV image  |
+| Normalize | 3@66x200  |
+| Convolution 5x5 | 24@31x98. activation='relu' |
+| Convolution 5x5 | 36@14x47, activation='relu' |
+| Convolution 5x5 | 48@5x22, activation='relu' |
+| Convolution 3x3 | 64@3x20, activation='relu' |
+| Convolution 3x3 | 64@1x18, activation='relu' |
 | Dropout | keep_prob=0.5 |
 | Flatten | |
-| Dense | |
-| Dense | |
-| Dense | |
-| Dense | |
+| Fully connected 1 | input 1164, output 100 |
+| Fully connected 2 | input 100, output 50 |
+| Fully connected 3 | input 50, output 10 |
+| Fully connected 4 | input 10, output 1 |
 
 This network was referred to [this paper](https://arxiv.org/pdf/1604.07316v1.pdf).
 
@@ -91,19 +91,19 @@ The final model architecture ([model.py](https://github.com/atinfinity/CarND-Beh
 
 | Layer  |Description  |
 |---|---|
-| Input | 200x60x3 YUV image  |
-| Lambda | Normalize  |
-| Convolution 5x5 | activation='relu' |
-| Convolution 5x5 | activation='relu' |
-| Convolution 5x5 | activation='relu' |
-| Convolution 3x3 | activation='relu' |
-| Convolution 3x3 | activation='relu' |
+| Input | 3@66x200 YUV image  |
+| Normalize | 3@66x200  |
+| Convolution 5x5 | 24@31x98. activation='relu' |
+| Convolution 5x5 | 36@14x47, activation='relu' |
+| Convolution 5x5 | 48@5x22, activation='relu' |
+| Convolution 3x3 | 64@3x20, activation='relu' |
+| Convolution 3x3 | 64@1x18, activation='relu' |
 | Dropout | keep_prob=0.5 |
 | Flatten | |
-| Dense | |
-| Dense | |
-| Dense | |
-| Dense | |
+| Fully connected 1 | input 1164, output 100 |
+| Fully connected 2 | input 100, output 50 |
+| Fully connected 3 | input 50, output 10 |
+| Fully connected 4 | input 10, output 1 |
 
 Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric) And, this figure was cited from [this paper](https://arxiv.org/pdf/1604.07316v1.pdf).
 
@@ -144,3 +144,16 @@ I used this training data for training the model. The validation set helped dete
 Here is loss curve(training and validation). From this figure, I think that over or under fitting has not occurred.
 
 ![alt text][image8]
+
+### Evaluation of Track2
+The simulator contains two tracks. So, I evaluated `Track2`, too.  
+At first, I collected data of `Track2` from simulator. As a result, I collected 35901  images and angles. And, I increased the data by data augumentation(x2).
+
+Here is loss curve(training and validation). From this figure, I think that over or under fitting has not occurred. And, you can watch the result on xxxx. 
+
+I think that `Track2` has the following difficult condition.
+
+- include shade scenes
+- include steep slope
+
+So, I think that I should increased data to improve result by data augumentation(shade, shift, brightness etc...).
